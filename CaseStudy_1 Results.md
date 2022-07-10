@@ -29,3 +29,4 @@ FROM
     sales
 GROUP BY customer_id;
 ```
+# ![Image]()
