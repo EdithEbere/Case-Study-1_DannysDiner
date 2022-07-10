@@ -29,4 +29,4 @@ FROM
     sales
 GROUP BY customer_id;
 ```
-# ![Image]()
+# ![Image](https://github.com/EdithEbere/Case-Study-1_DannysDiner/blob/main/Images/Q2.PNG)
