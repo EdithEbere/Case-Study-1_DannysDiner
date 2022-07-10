@@ -4,7 +4,7 @@ Get codes here
 ---
 
 ### **Question 1:**
-* What is the total amount each customer spent at the restaurant?
+_What is the total amount each customer spent at the restaurant?_
 
 ``` SQL
 SELECT 
@@ -16,4 +16,16 @@ FROM
 GROUP BY s.customer_id;
 ```
 ### Output:
-![Image](https://github.com/EdithEbere/Case-Study-1_DannysDiner/blob/main/Images/Q1.PNG)
+# ![Image](https://github.com/EdithEbere/Case-Study-1_DannysDiner/blob/main/Images/Q1.PNG)
+
+---
+
+### **Question 2:**
+_How many days has each customer visited the restaurant?_
+```SQL
+SELECT 
+    customer_id, COUNT(DISTINCT order_date) AS NumberOfDays
+FROM
+    sales
+GROUP BY customer_id;
+```
