@@ -1,6 +1,4 @@
-# **Case Study 1: DannysDiner**
-Get codes here
-
+# **CaseStudy #1: Danny'sDiner**
 ---
 
 ### **Question 1:**
