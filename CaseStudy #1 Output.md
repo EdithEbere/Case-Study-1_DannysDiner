@@ -12,14 +12,13 @@ FROM
     menu m ON s.product_id = m.product_id
 GROUP BY s.customer_id;
 ```
-#### SQL Query Details: Two tables, sales and menu were joined and grouped by customer_id to get the total amount spent by each customer.
+#### Commentary: Two tables, sales and menu were joined and grouped by customer_id to get the total amount spent by each customer.
 #### Output 1: Customer with id "A" spent the most out of all three.
 ![Image](https://github.com/EdithEbere/Case-Study-1_DannysDiner/blob/main/Images/Q1.PNG)
 
 ---
 
-### **Question 2:**
-_How many days has each customer visited the restaurant?_
+### **Question 2:** How many days has each customer visited the restaurant?
 ```SQL
 SELECT 
     customer_id, COUNT(DISTINCT order_date) AS NumberOfDays
@@ -27,10 +26,9 @@ FROM
     sales
 GROUP BY customer_id;
 ```
-### Explanation of SQL Query: #### COUNT(DISTINCT order_date) will return unique count of the days each customer visited the DannysDiner to order
-### Output 2:
+#### Commentary: COUNT(DISTINCT order_date) will return number of the days each customer visited the Danny's Diner to order
+#### Output 2: Customer with id "B" visited the most.
 ![Image](https://github.com/EdithEbere/Case-Study-1_DannysDiner/blob/main/Images/Q2.PNG)
-#### Customer with id "B" visited the most.
 
 ---
 
