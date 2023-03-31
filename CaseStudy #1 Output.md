@@ -1,8 +1,7 @@
 # **CaseStudy #1: Danny'sDiner**
 ---
 
-### **Question 1:**
-_What is the total amount each customer spent at the restaurant?_
+### **Question 1:** What is the total amount each customer spent at the restaurant?
 
 ``` SQL
 SELECT 
@@ -13,7 +12,7 @@ FROM
     menu m ON s.product_id = m.product_id
 GROUP BY s.customer_id;
 ```
-#### Explanation of SQL Query: Two tables, sales and menu were joined, grouped by customer_id to get the SUM of amount spent.
+#### SQL Query Details: Two tables, sales and menu were joined, grouped by customer_id to get the total aamout spent by each customer.
 ### Output 1:
 ![Image](https://github.com/EdithEbere/Case-Study-1_DannysDiner/blob/main/Images/Q1.PNG)
 #### Customer with id "A" spent the most out of all three.
