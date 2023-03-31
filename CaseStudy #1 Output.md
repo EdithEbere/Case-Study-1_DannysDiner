@@ -13,11 +13,11 @@ FROM
 GROUP BY s.customer_id;
 ```
 #### SQL Query Details: Two tables, sales and menu were joined, grouped by customer_id to get the total aamout spent by each customer.
-### Output 1:
+#### Output 1: Customer with id "A" spent the most out of all three.
 ![Image](https://github.com/EdithEbere/Case-Study-1_DannysDiner/blob/main/Images/Q1.PNG)
-#### Customer with id "A" spent the most out of all three.
 
 ---
+
 ### **Question 2:**
 _How many days has each customer visited the restaurant?_
 ```SQL
