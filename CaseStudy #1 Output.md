@@ -35,15 +35,16 @@ GROUP BY customer_id;
 ### **Question 3:**
 _What was the first item from the menu purchased by each customer?_
 ```SQL
-WITH CTE_FirstOrder AS 
+WITH FirstOrder AS
 (SELECT 
-    customer_id, order_date, product_name, dense_rank() OVER (partition by customer_id order by order_date asc) AS OrderRank
+    customer_id, order_date, product_name, dense_rank() OVER (partition by customer_id order by order_date) AS OrderRank
 FROM
     sales s
         JOIN
-    menu m ON s.product_id = m.product_id
-GROUP BY customer_id)
-SELECT customer_id, order_date, product_name FROM CTE_FirstOrder
+    menu m ON s.product_id = m.product_id)
+
+SELECT customer_id, order_date, product_name
+FROM FirstOrder
 WHERE OrderRank = 1;
 ```
 ### Output 3:
