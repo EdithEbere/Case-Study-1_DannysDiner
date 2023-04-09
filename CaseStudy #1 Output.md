@@ -100,11 +100,13 @@ FROM
 ```
 
 ### Output 4:
-![Image](https://github.com/EdithEbere/Case-Study-1_DannysDiner/blob/main/Images/Q1.PNG)
+![Image](https://github.com/EdithEbere/Case-Study-1_DannysDiner/blob/main/Images/Q4.PNG)
 
 Commentary:
 
 * A subquery was used to get the count of number of times product on the menu was ordered
+*
         * The subquery must be enclosed in parentheses
         * It must run indenpendently and named.
+        
 * The main query extracted the product with the highest count( ordered most)
