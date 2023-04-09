@@ -105,8 +105,7 @@ FROM
 Commentary:
 
 * A subquery was used to get the count of number of times product on the menu was ordered
-*
+
         * The subquery must be enclosed in parentheses
-        * It must run indenpendently and named.
-        
+        * It must run indenpendently and named.   
 * The main query extracted the product with the highest count( ordered most)
