@@ -109,3 +109,32 @@ Commentary:
         * The subquery must be enclosed in parentheses
         * It must run indenpendently and named.   
 * The main query extracted the product with the highest count( ordered most)
+
+---
+
+Q5. Which item was the most popular for each customer?
+
+```SQL
+WITH CTE_Purchase AS
+(SELECT customer_id, product_name, COUNT(product_name) ProductCount,
+DENSE_RANK() OVER(PARTITION BY customer_id ORDER BY COUNT(product_name) DESC) CountRank
+    FROM
+        sales s
+    JOIN menu m ON m.product_id = s.product_id
+    GROUP BY 1,2
+    ORDER BY 1 DESC)
+SELECT customer_id, product_name, ProductCount
+FROM CTE_Purchase
+WHERE CountRank = 1
+ORDER BY 1
+
+```
+### Output
+![Image](https://github.com/EdithEbere/Case-Study-1_DannysDiner/blob/main/Images/Q5.PNG)
+
+Commentary:
+
+*  Again using CTE, a subquery was used to extract the customer's most purchased product
+*  DENSE_RANK ranked each product purchased, PARTITION BY function grouped the customers A, B, C
+*  ORDER BY was used to sort number of times product was purchased by each customer, COUNT(product_name) in DESC order such that the highest count is ranked "1"
+*  The main query extracts the customers, product_name and ProductCount, filtering only product ranked as 1
