@@ -130,6 +130,8 @@ ORDER BY 1
 
 ```
 ### Output
+
+This result further validates the answer in question 4 as Ramen is the most purchased/ordered product on the menu
 ![Image](https://github.com/EdithEbere/Case-Study-1_DannysDiner/blob/main/Images/Q5.PNG)
 
 Commentary:
